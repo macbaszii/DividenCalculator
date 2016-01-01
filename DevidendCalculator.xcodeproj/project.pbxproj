@@ -18,6 +18,7 @@
 		DD27707F1C3704230043437B /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27707E1C3704230043437B /* MainViewModel.m */; };
 		DD2770821C3705880043437B /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770811C3705880043437B /* CircleButton.m */; };
 		DD2770851C3707460043437B /* ParticipantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770841C3707460043437B /* ParticipantCell.m */; };
+		DD2770901C3709EF0043437B /* UIColor+Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27708F1C3709EF0043437B /* UIColor+Generator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		DD2770811C3705880043437B /* CircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleButton.m; sourceTree = "<group>"; };
 		DD2770831C3707460043437B /* ParticipantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantCell.h; sourceTree = "<group>"; };
 		DD2770841C3707460043437B /* ParticipantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantCell.m; sourceTree = "<group>"; };
+		DD27708E1C3709EF0043437B /* UIColor+Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Generator.h"; sourceTree = "<group>"; };
+		DD27708F1C3709EF0043437B /* UIColor+Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Generator.m"; sourceTree = "<group>"; };
 		E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F889D4A214D2B9FE70FF390A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,14 +119,11 @@
 			children = (
 				DD27705B1C36FDFA0043437B /* AppDelegate.h */,
 				DD27705C1C36FDFA0043437B /* AppDelegate.m */,
-				DD27705E1C36FDFA0043437B /* MainViewController.h */,
-				DD27705F1C36FDFA0043437B /* MainViewController.m */,
-				DD27707D1C3704230043437B /* MainViewModel.h */,
-				DD27707E1C3704230043437B /* MainViewModel.m */,
-				DD2770801C3705880043437B /* CircleButton.h */,
-				DD2770811C3705880043437B /* CircleButton.m */,
-				DD2770831C3707460043437B /* ParticipantCell.h */,
-				DD2770841C3707460043437B /* ParticipantCell.m */,
+				DD2770891C3709830043437B /* Utilities */,
+				DD2770881C37097C0043437B /* Controller */,
+				DD27708A1C3709AA0043437B /* ViewModel */,
+				DD2770871C3709760043437B /* View */,
+				DD2770861C37096F0043437B /* Model */,
 				DD2770611C36FDFA0043437B /* Main.storyboard */,
 				DD2770641C36FDFA0043437B /* Assets.xcassets */,
 				DD2770661C36FDFA0043437B /* LaunchScreen.storyboard */,
@@ -148,6 +148,51 @@
 				DD2770741C36FDFA0043437B /* Info.plist */,
 			);
 			path = DevidendCalculatorTests;
+			sourceTree = "<group>";
+		};
+		DD2770861C37096F0043437B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DD2770871C3709760043437B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD2770801C3705880043437B /* CircleButton.h */,
+				DD2770811C3705880043437B /* CircleButton.m */,
+				DD2770831C3707460043437B /* ParticipantCell.h */,
+				DD2770841C3707460043437B /* ParticipantCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DD2770881C37097C0043437B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD27705E1C36FDFA0043437B /* MainViewController.h */,
+				DD27705F1C36FDFA0043437B /* MainViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DD2770891C3709830043437B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DD27708E1C3709EF0043437B /* UIColor+Generator.h */,
+				DD27708F1C3709EF0043437B /* UIColor+Generator.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		DD27708A1C3709AA0043437B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD27707D1C3704230043437B /* MainViewModel.h */,
+				DD27707E1C3704230043437B /* MainViewModel.m */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +349,7 @@
 				DD2770601C36FDFA0043437B /* MainViewController.m in Sources */,
 				DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */,
 				DD27705A1C36FDFA0043437B /* main.m in Sources */,
+				DD2770901C3709EF0043437B /* UIColor+Generator.m in Sources */,
 				DD2770821C3705880043437B /* CircleButton.m in Sources */,
 				DD27707F1C3704230043437B /* MainViewModel.m in Sources */,
 				DD2770851C3707460043437B /* ParticipantCell.m in Sources */,

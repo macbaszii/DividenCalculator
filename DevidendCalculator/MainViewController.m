@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "CircleButton.h"
 #import "ParticipantCell.h"
+#import "UIColor+Generator.h"
 
 static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 
@@ -62,7 +63,9 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 #pragma mark - Internal Methods
 
 - (void)setupView {
-    
+    self.addParticipantButton.backgroundColor = [UIColor addParticipantButtonColor];
+    self.calcualteButton.backgroundColor = [UIColor calculateButtonColor];
+    self.editInterestButton.backgroundColor = [UIColor editInterestButtonColor];
 }
 
 @end

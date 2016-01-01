@@ -17,6 +17,7 @@
     self.layer.cornerRadius = CGRectGetWidth(self.frame) / 2;
     
     self.titleLabel.numberOfLines = 2;
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
 }
 
 @end
