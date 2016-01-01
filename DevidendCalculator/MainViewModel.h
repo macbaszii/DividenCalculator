@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
+@class Participant;
 
 @interface MainViewModel : NSObject
+
+@property (nonatomic) double totalFund;
+@property (strong, nonatomic) NSMutableArray<Participant *> *participants;
+@property (nonatomic) double interest;
+
+- (NSString *)totalFundText;
+- (NSString *)interestText;
 
 @end

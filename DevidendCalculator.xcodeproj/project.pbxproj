@@ -19,6 +19,8 @@
 		DD2770821C3705880043437B /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770811C3705880043437B /* CircleButton.m */; };
 		DD2770851C3707460043437B /* ParticipantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770841C3707460043437B /* ParticipantCell.m */; };
 		DD2770901C3709EF0043437B /* UIColor+Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27708F1C3709EF0043437B /* UIColor+Generator.m */; };
+		DD2770931C370D680043437B /* NSNumber+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770921C370D680043437B /* NSNumber+Helper.m */; };
+		DD2770961C370F960043437B /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770951C370F960043437B /* Participant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		DD2770841C3707460043437B /* ParticipantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantCell.m; sourceTree = "<group>"; };
 		DD27708E1C3709EF0043437B /* UIColor+Generator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Generator.h"; sourceTree = "<group>"; };
 		DD27708F1C3709EF0043437B /* UIColor+Generator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Generator.m"; sourceTree = "<group>"; };
+		DD2770911C370D680043437B /* NSNumber+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Helper.h"; sourceTree = "<group>"; };
+		DD2770921C370D680043437B /* NSNumber+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Helper.m"; sourceTree = "<group>"; };
+		DD2770941C370F960043437B /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
+		DD2770951C370F960043437B /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
 		E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F889D4A214D2B9FE70FF390A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +159,8 @@
 		DD2770861C37096F0043437B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DD2770941C370F960043437B /* Participant.h */,
+				DD2770951C370F960043437B /* Participant.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -182,6 +190,8 @@
 			children = (
 				DD27708E1C3709EF0043437B /* UIColor+Generator.h */,
 				DD27708F1C3709EF0043437B /* UIColor+Generator.m */,
+				DD2770911C370D680043437B /* NSNumber+Helper.h */,
+				DD2770921C370D680043437B /* NSNumber+Helper.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -347,7 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2770601C36FDFA0043437B /* MainViewController.m in Sources */,
+				DD2770931C370D680043437B /* NSNumber+Helper.m in Sources */,
 				DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */,
+				DD2770961C370F960043437B /* Participant.m in Sources */,
 				DD27705A1C36FDFA0043437B /* main.m in Sources */,
 				DD2770901C3709EF0043437B /* UIColor+Generator.m in Sources */,
 				DD2770821C3705880043437B /* CircleButton.m in Sources */,

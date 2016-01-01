@@ -49,7 +49,9 @@
                                     <constraint firstAttribute="width" secondItem="EEi-9W-Iww" secondAttribute="height" multiplier="1:1" id="7qb-6b-HCv"/>
                                     <constraint firstAttribute="height" constant="100" id="mfU-4c-Two"/>
                                 </constraints>
-                                <state key="normal" title="เพิ่มผู้ร่วมทุน"/>
+                                <state key="normal" title="เพิ่มผู้ร่วมทุน">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-mm-zuY" customClass="CircleButton">
                                 <rect key="frame" x="250" y="199" width="100" height="100"/>
@@ -57,7 +59,9 @@
                                     <constraint firstAttribute="width" secondItem="hKM-mm-zuY" secondAttribute="height" multiplier="1:1" id="BTG-jY-qD1"/>
                                     <constraint firstAttribute="height" constant="100" id="Zjw-jl-ejV"/>
                                 </constraints>
-                                <state key="normal" title="คำนวนเงินปันผล"/>
+                                <state key="normal" title="คำนวนเงินปันผล">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-A2-zKr">
                                 <rect key="frame" x="0.0" y="307" width="600" height="293"/>
@@ -71,13 +75,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNX-gx-F2D">
-                                                    <rect key="frame" x="8" y="0.0" width="58" height="59"/>
+                                                    <rect key="frame" x="20" y="0.0" width="58" height="59"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45.75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-Nx-BOL">
-                                                    <rect key="frame" x="547" y="0.0" width="45" height="59"/>
+                                                    <rect key="frame" x="535" y="0.0" width="45" height="59"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -86,16 +90,16 @@
                                             <constraints>
                                                 <constraint firstItem="sNX-gx-F2D" firstAttribute="top" secondItem="Xx4-b6-O32" secondAttribute="top" id="0rs-8A-F3A"/>
                                                 <constraint firstAttribute="bottom" secondItem="VLc-Nx-BOL" secondAttribute="bottom" id="9Ur-uO-5FD"/>
-                                                <constraint firstAttribute="trailing" secondItem="VLc-Nx-BOL" secondAttribute="trailing" constant="8" id="Zww-4n-IsV"/>
+                                                <constraint firstAttribute="trailing" secondItem="VLc-Nx-BOL" secondAttribute="trailing" constant="20" symbolic="YES" id="Zww-4n-IsV"/>
                                                 <constraint firstItem="VLc-Nx-BOL" firstAttribute="top" secondItem="Xx4-b6-O32" secondAttribute="top" id="c6a-0W-t18"/>
                                                 <constraint firstAttribute="bottom" secondItem="sNX-gx-F2D" secondAttribute="bottom" id="ilg-r5-aNQ"/>
-                                                <constraint firstItem="sNX-gx-F2D" firstAttribute="leading" secondItem="Xx4-b6-O32" secondAttribute="leading" constant="8" id="n6E-Ms-K9X"/>
+                                                <constraint firstItem="sNX-gx-F2D" firstAttribute="leading" secondItem="Xx4-b6-O32" secondAttribute="leading" constant="20" symbolic="YES" id="n6E-Ms-K9X"/>
                                                 <constraint firstItem="VLc-Nx-BOL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sNX-gx-F2D" secondAttribute="trailing" constant="20" id="o5p-iG-K2a"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dividendLabel" destination="VLc-Nx-BOL" id="ZHN-tw-Hc0"/>
-                                            <outlet property="moneyLabel" destination="sNX-gx-F2D" id="gfu-Uj-erk"/>
+                                            <outlet property="fundLabel" destination="sNX-gx-F2D" id="a9q-AR-IvW"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -110,7 +114,9 @@
                                     <constraint firstAttribute="width" secondItem="mY4-HS-fzC" secondAttribute="height" multiplier="1:1" id="PAF-4e-Jr0"/>
                                     <constraint firstAttribute="height" constant="100" id="XbW-RQ-bAy"/>
                                 </constraints>
-                                <state key="normal" title="แก้ไขดอกเบี้ย"/>
+                                <state key="normal" title="แก้ไขดอกเบี้ย">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -147,7 +153,7 @@
                         <outlet property="editInterestButton" destination="mY4-HS-fzC" id="h4a-z7-oEt"/>
                         <outlet property="interestLabel" destination="dmn-Ie-dok" id="t9i-nF-s8u"/>
                         <outlet property="tableView" destination="DcP-A2-zKr" id="RWo-Id-HJO"/>
-                        <outlet property="totalLabel" destination="MGB-cl-fis" id="9n5-pu-H7q"/>
+                        <outlet property="totalFundLabel" destination="MGB-cl-fis" id="hOs-pr-8cZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
