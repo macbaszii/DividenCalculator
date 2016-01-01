@@ -63,7 +63,7 @@
                                 <rect key="frame" x="0.0" y="307" width="600" height="293"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="g1G-rN-7zH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" rowHeight="60" id="g1G-rN-7zH" customClass="ParticipantCell">
                                         <rect key="frame" x="0.0" y="28" width="600" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g1G-rN-7zH" id="Xx4-b6-O32">
@@ -93,8 +93,16 @@
                                                 <constraint firstItem="VLc-Nx-BOL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sNX-gx-F2D" secondAttribute="trailing" constant="20" id="o5p-iG-K2a"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dividendLabel" destination="VLc-Nx-BOL" id="ZHN-tw-Hc0"/>
+                                            <outlet property="moneyLabel" destination="sNX-gx-F2D" id="gfu-Uj-erk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qsb-D0-0AJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gnc-fF-awu"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-HS-fzC" customClass="CircleButton">
                                 <rect key="frame" x="370" y="199" width="100" height="100"/>
@@ -133,6 +141,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน" id="aaA-F1-sFm"/>
+                    <connections>
+                        <outlet property="addParticipantButton" destination="EEi-9W-Iww" id="4Aw-2l-Nqf"/>
+                        <outlet property="calcualteButton" destination="hKM-mm-zuY" id="xgb-Es-F9h"/>
+                        <outlet property="editInterestButton" destination="mY4-HS-fzC" id="h4a-z7-oEt"/>
+                        <outlet property="interestLabel" destination="dmn-Ie-dok" id="t9i-nF-s8u"/>
+                        <outlet property="tableView" destination="DcP-A2-zKr" id="RWo-Id-HJO"/>
+                        <outlet property="totalLabel" destination="MGB-cl-fis" id="9n5-pu-H7q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
