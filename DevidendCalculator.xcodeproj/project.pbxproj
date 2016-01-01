@@ -16,6 +16,7 @@
 		DD2770681C36FDFA0043437B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2770661C36FDFA0043437B /* LaunchScreen.storyboard */; };
 		DD2770731C36FDFA0043437B /* DevidendCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770721C36FDFA0043437B /* DevidendCalculatorTests.m */; };
 		DD27707F1C3704230043437B /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27707E1C3704230043437B /* MainViewModel.m */; };
+		DD2770821C3705880043437B /* CircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770811C3705880043437B /* CircleButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		DD2770741C36FDFA0043437B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD27707D1C3704230043437B /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		DD27707E1C3704230043437B /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		DD2770801C3705880043437B /* CircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleButton.h; sourceTree = "<group>"; };
+		DD2770811C3705880043437B /* CircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleButton.m; sourceTree = "<group>"; };
 		E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F889D4A214D2B9FE70FF390A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +117,8 @@
 				DD27705F1C36FDFA0043437B /* MainViewController.m */,
 				DD27707D1C3704230043437B /* MainViewModel.h */,
 				DD27707E1C3704230043437B /* MainViewModel.m */,
+				DD2770801C3705880043437B /* CircleButton.h */,
+				DD2770811C3705880043437B /* CircleButton.m */,
 				DD2770611C36FDFA0043437B /* Main.storyboard */,
 				DD2770641C36FDFA0043437B /* Assets.xcassets */,
 				DD2770661C36FDFA0043437B /* LaunchScreen.storyboard */,
@@ -294,6 +299,7 @@
 				DD2770601C36FDFA0043437B /* MainViewController.m in Sources */,
 				DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */,
 				DD27705A1C36FDFA0043437B /* main.m in Sources */,
+				DD2770821C3705880043437B /* CircleButton.m in Sources */,
 				DD27707F1C3704230043437B /* MainViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

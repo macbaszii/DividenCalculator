@@ -43,7 +43,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEi-9W-Iww">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEi-9W-Iww" customClass="CircleButton">
                                 <rect key="frame" x="130" y="199" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EEi-9W-Iww" secondAttribute="height" multiplier="1:1" id="7qb-6b-HCv"/>
@@ -51,7 +51,7 @@
                                 </constraints>
                                 <state key="normal" title="เพิ่มผู้ร่วมทุน"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-mm-zuY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-mm-zuY" customClass="CircleButton">
                                 <rect key="frame" x="250" y="199" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hKM-mm-zuY" secondAttribute="height" multiplier="1:1" id="BTG-jY-qD1"/>
@@ -96,7 +96,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-HS-fzC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-HS-fzC" customClass="CircleButton">
                                 <rect key="frame" x="370" y="199" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mY4-HS-fzC" secondAttribute="height" multiplier="1:1" id="PAF-4e-Jr0"/>
