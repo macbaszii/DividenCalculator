@@ -52,6 +52,9 @@
                                 <state key="normal" title="เพิ่มผู้ร่วมทุน">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addParticipant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hqY-V3-yhb"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-mm-zuY" customClass="CircleButton">
                                 <rect key="frame" x="250" y="199" width="100" height="100"/>
@@ -62,6 +65,9 @@
                                 <state key="normal" title="คำนวนเงินปันผล">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="calculateDividend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="umY-VF-aUB"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-A2-zKr">
                                 <rect key="frame" x="0.0" y="307" width="600" height="293"/>
@@ -117,6 +123,9 @@
                                 <state key="normal" title="แก้ไขดอกเบี้ย">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editInterest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eCw-Xe-fwn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

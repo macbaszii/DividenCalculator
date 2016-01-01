@@ -12,6 +12,7 @@
 #import "UIColor+Generator.h"
 #import "MainViewModel.h"
 #import "Participant.h"
+#import "NSString+Helper.h"
 
 static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 
@@ -40,11 +41,48 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 #pragma mark - Actions
 
 - (IBAction)addParticipant:(id)sender {
-
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[self.viewModel addParticipantText] message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType = UIKeyboardTypeNumberPad;
+        textField.placeholder = @"ใส่จำนวนเงินเป็นตัวเลข";
+    }];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"เพิ่ม" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString *input = alert.textFields.firstObject.text;
+        if ([input isNumeric]) {
+            [self.viewModel addParticipantWithFund:[input doubleValue]];
+            [self updateLabels];
+            [self.tableView reloadData];
+        }
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleDefault handler:nil]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)editInterest:(id)sender {
-
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"แก้ไขดอกเบี้ย" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.keyboardType = UIKeyboardTypeNumberPad;
+        textField.placeholder = @"ใส่จำนวนดอกเบี้ยเป็นตัวเลข";
+    }];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"แก้ไข" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString *input = alert.textFields.firstObject.text;
+        if ([input isNumeric]) {
+            self.viewModel.interest = [input doubleValue];
+            [self updateLabels];
+        }
+    }]];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleDefault handler:nil]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)calculateDividend:(id)sender {

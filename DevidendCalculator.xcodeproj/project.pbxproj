@@ -21,6 +21,7 @@
 		DD2770901C3709EF0043437B /* UIColor+Generator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27708F1C3709EF0043437B /* UIColor+Generator.m */; };
 		DD2770931C370D680043437B /* NSNumber+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770921C370D680043437B /* NSNumber+Helper.m */; };
 		DD2770961C370F960043437B /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770951C370F960043437B /* Participant.m */; };
+		DD2770991C3716CD0043437B /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770981C3716CD0043437B /* NSString+Helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		DD2770921C370D680043437B /* NSNumber+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Helper.m"; sourceTree = "<group>"; };
 		DD2770941C370F960043437B /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
 		DD2770951C370F960043437B /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
+		DD2770971C3716CD0043437B /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
+		DD2770981C3716CD0043437B /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
 		E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F889D4A214D2B9FE70FF390A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,6 +195,8 @@
 				DD27708F1C3709EF0043437B /* UIColor+Generator.m */,
 				DD2770911C370D680043437B /* NSNumber+Helper.h */,
 				DD2770921C370D680043437B /* NSNumber+Helper.m */,
+				DD2770971C3716CD0043437B /* NSString+Helper.h */,
+				DD2770981C3716CD0043437B /* NSString+Helper.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 				DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */,
 				DD2770961C370F960043437B /* Participant.m in Sources */,
 				DD27705A1C36FDFA0043437B /* main.m in Sources */,
+				DD2770991C3716CD0043437B /* NSString+Helper.m in Sources */,
 				DD2770901C3709EF0043437B /* UIColor+Generator.m in Sources */,
 				DD2770821C3705880043437B /* CircleButton.m in Sources */,
 				DD27707F1C3704230043437B /* MainViewModel.m in Sources */,

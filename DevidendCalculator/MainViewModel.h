@@ -20,4 +20,7 @@
 - (NSString *)totalFundText;
 - (NSString *)interestText;
 
+- (NSString *)addParticipantText;
+- (void)addParticipantWithFund:(double)fund;
+
 @end

@@ -26,12 +26,32 @@
 
 #pragma mark - Public Accessor
 
+- (void)addParticipantWithFund:(double)fund {
+    [self.participants addObject:[[Participant alloc] initWithFund:fund]];
+    [self calculateTotalFund];
+}
+
 - (NSString *)totalFundText {
     return [@(self.totalFund) addThousandSeperator];
 }
 
 - (NSString *)interestText {
     return [@(self.interest) addThousandSeperator];
+}
+
+- (NSString *)addParticipantText {
+    return [NSString stringWithFormat:@"เพิ่มผู้ร่วมทุนคนที่ %ld", self.participants.count];
+}
+
+#pragma mark - Internal Methods
+
+- (void)calculateTotalFund {
+    double sum = 0;
+    for (Participant *participant in self.participants) {
+        sum += participant.fund;
+    }
+    
+    self.totalFund = sum;
 }
 
 @end
