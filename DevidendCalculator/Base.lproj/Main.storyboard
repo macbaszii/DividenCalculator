@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="XZ8-qn-S6G">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,143 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเงินรวม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6w-VO-meX">
+                                <rect key="frame" x="20" y="94" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ดอกเบี้ย" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-jZ-hIS">
+                                <rect key="frame" x="522" y="94" width="58" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MGB-cl-fis">
+                                <rect key="frame" x="17" y="123" width="107" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-Ie-dok">
+                                <rect key="frame" x="514" y="123" width="74" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEi-9W-Iww">
+                                <rect key="frame" x="130" y="199" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EEi-9W-Iww" secondAttribute="height" multiplier="1:1" id="7qb-6b-HCv"/>
+                                    <constraint firstAttribute="height" constant="100" id="mfU-4c-Two"/>
+                                </constraints>
+                                <state key="normal" title="เพิ่มผู้ร่วมทุน"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-mm-zuY">
+                                <rect key="frame" x="250" y="199" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hKM-mm-zuY" secondAttribute="height" multiplier="1:1" id="BTG-jY-qD1"/>
+                                    <constraint firstAttribute="height" constant="100" id="Zjw-jl-ejV"/>
+                                </constraints>
+                                <state key="normal" title="คำนวนเงินปันผล"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-A2-zKr">
+                                <rect key="frame" x="0.0" y="307" width="600" height="293"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="g1G-rN-7zH">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g1G-rN-7zH" id="Xx4-b6-O32">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNX-gx-F2D">
+                                                    <rect key="frame" x="8" y="0.0" width="58" height="59"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45.75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-Nx-BOL">
+                                                    <rect key="frame" x="547" y="0.0" width="45" height="59"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sNX-gx-F2D" firstAttribute="top" secondItem="Xx4-b6-O32" secondAttribute="top" id="0rs-8A-F3A"/>
+                                                <constraint firstAttribute="bottom" secondItem="VLc-Nx-BOL" secondAttribute="bottom" id="9Ur-uO-5FD"/>
+                                                <constraint firstAttribute="trailing" secondItem="VLc-Nx-BOL" secondAttribute="trailing" constant="8" id="Zww-4n-IsV"/>
+                                                <constraint firstItem="VLc-Nx-BOL" firstAttribute="top" secondItem="Xx4-b6-O32" secondAttribute="top" id="c6a-0W-t18"/>
+                                                <constraint firstAttribute="bottom" secondItem="sNX-gx-F2D" secondAttribute="bottom" id="ilg-r5-aNQ"/>
+                                                <constraint firstItem="sNX-gx-F2D" firstAttribute="leading" secondItem="Xx4-b6-O32" secondAttribute="leading" constant="8" id="n6E-Ms-K9X"/>
+                                                <constraint firstItem="VLc-Nx-BOL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sNX-gx-F2D" secondAttribute="trailing" constant="20" id="o5p-iG-K2a"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-HS-fzC">
+                                <rect key="frame" x="370" y="199" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mY4-HS-fzC" secondAttribute="height" multiplier="1:1" id="PAF-4e-Jr0"/>
+                                    <constraint firstAttribute="height" constant="100" id="XbW-RQ-bAy"/>
+                                </constraints>
+                                <state key="normal" title="แก้ไขดอกเบี้ย"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dmn-Ie-dok" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MGB-cl-fis" secondAttribute="trailing" constant="8" id="5g2-aG-2VA"/>
+                            <constraint firstItem="MGB-cl-fis" firstAttribute="centerY" secondItem="dmn-Ie-dok" secondAttribute="centerY" id="6zS-6U-QgG"/>
+                            <constraint firstItem="mY4-HS-fzC" firstAttribute="leading" secondItem="hKM-mm-zuY" secondAttribute="trailing" constant="20" id="J9b-18-c9s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FQS-jZ-hIS" secondAttribute="trailing" id="LWe-Dj-fBB"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="N6w-VO-meX" secondAttribute="leading" id="N8z-b0-mic"/>
+                            <constraint firstItem="MGB-cl-fis" firstAttribute="centerX" secondItem="N6w-VO-meX" secondAttribute="centerX" id="RRk-6C-3dj"/>
+                            <constraint firstAttribute="trailing" secondItem="DcP-A2-zKr" secondAttribute="trailing" id="Swl-hf-33l"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mY4-HS-fzC" secondAttribute="trailing" constant="20" symbolic="YES" id="TNn-u7-vee"/>
+                            <constraint firstItem="N6w-VO-meX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="TQ1-ai-eVq"/>
+                            <constraint firstItem="hKM-mm-zuY" firstAttribute="top" secondItem="MGB-cl-fis" secondAttribute="bottom" constant="40" id="TlR-5c-1Br"/>
+                            <constraint firstItem="MGB-cl-fis" firstAttribute="top" secondItem="N6w-VO-meX" secondAttribute="bottom" constant="8" id="WkB-cw-GXf"/>
+                            <constraint firstItem="dmn-Ie-dok" firstAttribute="centerX" secondItem="FQS-jZ-hIS" secondAttribute="centerX" id="dne-vW-htW"/>
+                            <constraint firstItem="hKM-mm-zuY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fkB-cC-8yJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DcP-A2-zKr" secondAttribute="bottom" id="gBV-g2-6pR"/>
+                            <constraint firstItem="EEi-9W-Iww" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="gNx-oA-tdu"/>
+                            <constraint firstItem="FQS-jZ-hIS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="N6w-VO-meX" secondAttribute="trailing" constant="20" id="i28-7w-rrh"/>
+                            <constraint firstItem="DcP-A2-zKr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jwS-va-N96"/>
+                            <constraint firstItem="DcP-A2-zKr" firstAttribute="top" secondItem="hKM-mm-zuY" secondAttribute="bottom" constant="8" symbolic="YES" id="oMD-WD-4Dt"/>
+                            <constraint firstItem="mY4-HS-fzC" firstAttribute="centerY" secondItem="hKM-mm-zuY" secondAttribute="centerY" id="qVR-td-9Vm"/>
+                            <constraint firstItem="dmn-Ie-dok" firstAttribute="top" secondItem="FQS-jZ-hIS" secondAttribute="bottom" constant="8" id="qky-cm-Bhh"/>
+                            <constraint firstItem="hKM-mm-zuY" firstAttribute="leading" secondItem="EEi-9W-Iww" secondAttribute="trailing" constant="20" id="rIJ-vb-gil"/>
+                            <constraint firstItem="FQS-jZ-hIS" firstAttribute="centerY" secondItem="N6w-VO-meX" secondAttribute="centerY" id="vLn-SW-KsP"/>
+                            <constraint firstItem="EEi-9W-Iww" firstAttribute="centerY" secondItem="hKM-mm-zuY" secondAttribute="centerY" id="y72-YW-ukT"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน" id="aaA-F1-sFm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1001" y="1014"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EYw-uh-Xgf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XZ8-qn-S6G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Uk-U4-amy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zN0-hG-Fzc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYk-Xd-qgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="306" y="1014"/>
         </scene>
     </scenes>
 </document>
