@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB8DDACBD4794140EF8A7C06 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F889D4A214D2B9FE70FF390A /* libPods.a */; };
 		DD27705A1C36FDFA0043437B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770591C36FDFA0043437B /* main.m */; };
 		DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27705C1C36FDFA0043437B /* AppDelegate.m */; };
 		DD2770601C36FDFA0043437B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27705F1C36FDFA0043437B /* MainViewController.m */; };
@@ -14,6 +15,7 @@
 		DD2770651C36FDFA0043437B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2770641C36FDFA0043437B /* Assets.xcassets */; };
 		DD2770681C36FDFA0043437B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD2770661C36FDFA0043437B /* LaunchScreen.storyboard */; };
 		DD2770731C36FDFA0043437B /* DevidendCalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770721C36FDFA0043437B /* DevidendCalculatorTests.m */; };
+		DD27707F1C3704230043437B /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27707E1C3704230043437B /* MainViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,11 @@
 		DD27706E1C36FDFA0043437B /* DevidendCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevidendCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2770721C36FDFA0043437B /* DevidendCalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevidendCalculatorTests.m; sourceTree = "<group>"; };
 		DD2770741C36FDFA0043437B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD27707D1C3704230043437B /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		DD27707E1C3704230043437B /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F889D4A214D2B9FE70FF390A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB8DDACBD4794140EF8A7C06 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +68,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4038093A6C5C5E915B395BC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */,
+				E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		446DE8489E6C1524A1C8A049 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F889D4A214D2B9FE70FF390A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD27704C1C36FDFA0043437B = {
 			isa = PBXGroup;
 			children = (
 				DD2770571C36FDFA0043437B /* DevidendCalculator */,
 				DD2770711C36FDFA0043437B /* DevidendCalculatorTests */,
 				DD2770561C36FDFA0043437B /* Products */,
+				4038093A6C5C5E915B395BC9 /* Pods */,
+				446DE8489E6C1524A1C8A049 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +112,8 @@
 				DD27705C1C36FDFA0043437B /* AppDelegate.m */,
 				DD27705E1C36FDFA0043437B /* MainViewController.h */,
 				DD27705F1C36FDFA0043437B /* MainViewController.m */,
+				DD27707D1C3704230043437B /* MainViewModel.h */,
+				DD27707E1C3704230043437B /* MainViewModel.m */,
 				DD2770611C36FDFA0043437B /* Main.storyboard */,
 				DD2770641C36FDFA0043437B /* Assets.xcassets */,
 				DD2770661C36FDFA0043437B /* LaunchScreen.storyboard */,
@@ -118,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DD2770771C36FDFA0043437B /* Build configuration list for PBXNativeTarget "DevidendCalculator" */;
 			buildPhases = (
+				A4A3771CB167D296C2AA6FAD /* Check Pods Manifest.lock */,
 				DD2770511C36FDFA0043437B /* Sources */,
 				DD2770521C36FDFA0043437B /* Frameworks */,
 				DD2770531C36FDFA0043437B /* Resources */,
+				6318D188B679D47410E8183D /* Embed Pods Frameworks */,
+				D1ACA22FCEA59660EF1A390E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +238,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6318D188B679D47410E8183D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4A3771CB167D296C2AA6FAD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D1ACA22FCEA59660EF1A390E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DD2770511C36FDFA0043437B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -214,6 +294,7 @@
 				DD2770601C36FDFA0043437B /* MainViewController.m in Sources */,
 				DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */,
 				DD27705A1C36FDFA0043437B /* main.m in Sources */,
+				DD27707F1C3704230043437B /* MainViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +420,7 @@
 		};
 		DD2770781C36FDFA0043437B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DevidendCalculator/Info.plist;
@@ -350,6 +432,7 @@
 		};
 		DD2770791C36FDFA0043437B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DevidendCalculator/Info.plist;
@@ -402,6 +485,7 @@
 				DD2770791C36FDFA0043437B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DD27707A1C36FDFA0043437B /* Build configuration list for PBXNativeTarget "DevidendCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +494,7 @@
 				DD27707C1C36FDFA0043437B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
