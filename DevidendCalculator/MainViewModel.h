@@ -27,4 +27,6 @@
 - (NSString *)addParticipantText;
 - (void)addParticipantWithFund:(double)fund;
 
+- (void)clearAllData;
+
 @end

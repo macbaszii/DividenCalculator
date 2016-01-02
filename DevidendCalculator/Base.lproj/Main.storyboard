@@ -152,7 +152,13 @@
                             <constraint firstItem="EEi-9W-Iww" firstAttribute="centerY" secondItem="hKM-mm-zuY" secondAttribute="centerY" id="y72-YW-ukT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน" id="aaA-F1-sFm"/>
+                    <navigationItem key="navigationItem" title="โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน" id="aaA-F1-sFm">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="pt8-nY-fkt">
+                            <connections>
+                                <action selector="clear:" destination="BYZ-38-t0r" id="gBx-3c-v0s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addParticipantButton" destination="EEi-9W-Iww" id="4Aw-2l-Nqf"/>
                         <outlet property="calculateButton" destination="hKM-mm-zuY" id="Jgc-KS-nR8"/>

@@ -87,6 +87,11 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+- (IBAction)clear:(id)sender {
+    [self.viewModel clearAllData];
+    [self updateLabels];
+}
+
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

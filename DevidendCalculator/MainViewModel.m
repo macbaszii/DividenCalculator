@@ -26,11 +26,7 @@
         return nil;
     }
     
-    self.totalFund = 0;
-    self.interest = 0;
-    self.participants = [@[] mutableCopy];
-    self.tableViewNeedsReload = NO;
-    
+    [self initializeData];
     [self setupBindings];
     
     return self;
@@ -56,7 +52,18 @@
     return [NSString stringWithFormat:@"เพิ่มผู้ร่วมทุนคนที่ %ld", self.participants.count + 1];
 }
 
+- (void)clearAllData {
+    [self initializeData];
+}
+
 #pragma mark - Internal Methods
+
+- (void)initializeData {
+    self.totalFund = 0;
+    self.interest = 0;
+    self.participants = [@[] mutableCopy];
+    self.tableViewNeedsReload = NO;
+}
 
 - (void)setupBindings {
     RACSignal *validParticipants = [RACObserve(self, participants) map:^id(NSArray<Participant *> *participants) {
