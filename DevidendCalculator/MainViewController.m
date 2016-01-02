@@ -153,6 +153,16 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 }
 
 - (void)updateLabels {
+    NSString *changeTextAnimationKey = @"changeTextTransition";
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.5;
+    animation.type = kCATransitionFade;
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    [self.totalFundLabel.layer addAnimation:animation
+                                     forKey:changeTextAnimationKey];
+    [self.interestLabel.layer addAnimation:animation
+                                    forKey:changeTextAnimationKey];
+    
     self.totalFundLabel.text = self.viewModel.totalFundText;
     self.interestLabel.text = self.viewModel.interestText;
 }

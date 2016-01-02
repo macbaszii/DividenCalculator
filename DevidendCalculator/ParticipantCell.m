@@ -18,6 +18,11 @@
 
 @implementation ParticipantCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
+}
+
 - (void)configureWithParticipant:(Participant *)participant
                            atRow:(NSInteger)row {
     
