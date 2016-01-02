@@ -160,6 +160,11 @@
                                 <action selector="clear:" destination="BYZ-38-t0r" id="gBx-3c-v0s"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="7na-fS-2Lz">
+                            <connections>
+                                <action selector="deleteLatestParticipant:" destination="BYZ-38-t0r" id="6dt-9D-GSU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addParticipantButton" destination="EEi-9W-Iww" id="4Aw-2l-Nqf"/>

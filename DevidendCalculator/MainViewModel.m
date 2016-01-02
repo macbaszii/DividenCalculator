@@ -37,6 +37,14 @@
 - (void)addParticipantWithFund:(double)fund {
     NSMutableArray *participants = [self mutableArrayValueForKeyPath:@keypath(self, participants)];
     [participants addObject:[[Participant alloc] initWithFund:fund]];
+    [self resetParticipantsDividend];
+    self.totalFund = [DividendCalculator calculateTotalFundForParticipants:self.participants].doubleValue;
+}
+
+- (void)deleteLatestPaticipant {
+    NSMutableArray *participants = [self mutableArrayValueForKeyPath:@keypath(self, participants)];
+    [participants removeLastObject];
+    [self resetParticipantsDividend];
     self.totalFund = [DividendCalculator calculateTotalFundForParticipants:self.participants].doubleValue;
 }
 
@@ -57,6 +65,12 @@
 }
 
 #pragma mark - Internal Methods
+
+- (void)resetParticipantsDividend {
+    for (Participant *participant in self.participants) {
+        participant.dividend = -1;
+    }
+}
 
 - (void)initializeData {
     self.totalFund = 0;

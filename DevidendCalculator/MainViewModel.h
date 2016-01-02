@@ -26,6 +26,7 @@
 
 - (NSString *)addParticipantText;
 - (void)addParticipantWithFund:(double)fund;
+- (void)deleteLatestPaticipant;
 
 - (void)clearAllData;
 

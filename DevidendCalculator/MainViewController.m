@@ -61,7 +61,7 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
         }
     }]];
     
-    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleCancel handler:nil]];
     
     [self presentViewController:alert animated:YES completion:nil];
 }
@@ -83,14 +83,33 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
         }
     }]];
     
-    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleDefault handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleCancel handler:nil]];
     
     [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (IBAction)clear:(id)sender {
-    [self.viewModel clearAllData];
-    [self updateLabels];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ยืนยันล้างข้อมูลทั้งหมด" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยืนยัน"
+                                              style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                [self.viewModel clearAllData];
+                                                [self updateLabels];
+                                            }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)deleteLatestParticipant:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ลบข้อมูลล่าสุด" message:nil preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยืนยัน"
+                                              style:UIAlertActionStyleDefault
+                                            handler:^(UIAlertAction * _Nonnull action) {
+                                                [self.viewModel deleteLatestPaticipant];
+                                                [self updateLabels];
+                                            }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"ยกเลิก" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDataSource and UITableViewDelegate
@@ -145,8 +164,15 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
     if ([self.latestIndexPath isEqual:addingIndexPath]) {
         [self.tableView insertRowsAtIndexPaths:@[addingIndexPath]
                               withRowAnimation:UITableViewRowAnimationRight];
-    } else {
         [self.tableView reloadData];
+    } else {
+        if (self.latestIndexPath.row - addingIndexPath.row == 2) {
+            NSIndexPath *deletionIndexPath = [NSIndexPath indexPathForRow:(self.latestIndexPath.row - 1) inSection:0];
+            [self.tableView deleteRowsAtIndexPaths:@[deletionIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
+            [self.tableView reloadData];
+        } else {
+            [self.tableView reloadData];
+        }
     }
     
     self.viewModel.tableViewNeedsReload = NO;
