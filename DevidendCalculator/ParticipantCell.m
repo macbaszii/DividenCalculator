@@ -22,7 +22,7 @@
                            atRow:(NSInteger)row {
     
     self.fundLabel.text = [NSString stringWithFormat:@"%ld. %.2f", row + 1, participant.fund];
-    self.dividendLabel.text = (participant.dividend == -1) ? @"-" : [NSString stringWithFormat:@"%.2f", participant.fund];
+    self.dividendLabel.text = (participant.dividend == -1) ? @"-" : [NSString stringWithFormat:@"%.2f", participant.dividend];
 }
 
 @end

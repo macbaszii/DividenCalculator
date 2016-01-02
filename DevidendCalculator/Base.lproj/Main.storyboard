@@ -65,9 +65,6 @@
                                 <state key="normal" title="คำนวนเงินปันผล">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="calculateDividend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="umY-VF-aUB"/>
-                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-A2-zKr">
                                 <rect key="frame" x="0.0" y="307" width="600" height="293"/>
@@ -158,7 +155,7 @@
                     <navigationItem key="navigationItem" title="โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน" id="aaA-F1-sFm"/>
                     <connections>
                         <outlet property="addParticipantButton" destination="EEi-9W-Iww" id="4Aw-2l-Nqf"/>
-                        <outlet property="calcualteButton" destination="hKM-mm-zuY" id="xgb-Es-F9h"/>
+                        <outlet property="calculateButton" destination="hKM-mm-zuY" id="Jgc-KS-nR8"/>
                         <outlet property="editInterestButton" destination="mY4-HS-fzC" id="h4a-z7-oEt"/>
                         <outlet property="interestLabel" destination="dmn-Ie-dok" id="t9i-nF-s8u"/>
                         <outlet property="tableView" destination="DcP-A2-zKr" id="RWo-Id-HJO"/>

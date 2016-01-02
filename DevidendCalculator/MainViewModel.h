@@ -7,11 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @class Participant;
+@class RACCommand;
 
 @interface MainViewModel : NSObject
+
+@property (strong, nonatomic) RACCommand *calculateDividendCommand;
+@property (nonatomic) BOOL canCalculateDividend;
+@property (nonatomic) BOOL tableViewNeedsReload;
 
 @property (nonatomic) double totalFund;
 @property (strong, nonatomic) NSMutableArray<Participant *> *participants;

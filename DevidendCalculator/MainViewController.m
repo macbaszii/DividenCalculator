@@ -6,6 +6,8 @@
 //  Copyright © 2559 Kiattisak Anoochitarom. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 #import "MainViewController.h"
 #import "CircleButton.h"
 #import "ParticipantCell.h"
@@ -22,7 +24,7 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 @property (weak, nonatomic) IBOutlet UILabel *interestLabel;
 
 @property (weak, nonatomic) IBOutlet CircleButton *addParticipantButton;
-@property (weak, nonatomic) IBOutlet CircleButton *calcualteButton;
+@property (weak, nonatomic) IBOutlet CircleButton *calculateButton;
 @property (weak, nonatomic) IBOutlet CircleButton *editInterestButton;
 
 @property (strong, nonatomic) MainViewModel *viewModel;
@@ -34,7 +36,7 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupData];
+    [self setupBindings];
     [self setupView];
 }
 
@@ -85,10 +87,6 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-- (IBAction)calculateDividend:(id)sender {
-    
-}
-
 #pragma mark - UITableViewDataSource and UITableViewDelegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -107,16 +105,30 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 
 #pragma mark - Internal Methods
 
-- (void)setupData {
-    self.viewModel = [[MainViewModel alloc] init];
-}
-
 - (void)setupView {
     self.addParticipantButton.backgroundColor = [UIColor addParticipantButtonColor];
-    self.calcualteButton.backgroundColor = [UIColor calculateButtonColor];
+    self.calculateButton.backgroundColor = [UIColor calculateButtonColor];
     self.editInterestButton.backgroundColor = [UIColor editInterestButtonColor];
     
     [self updateLabels];
+}
+
+- (void)setupBindings {
+    self.viewModel = [[MainViewModel alloc] init];
+    self.calculateButton.rac_command = self.viewModel.calculateDividendCommand;
+    
+    RAC(self, calculateButton.enabled) = RACObserve(self, viewModel.canCalculateDividend);
+    RAC(self, calculateButton.alpha) = [RACObserve(self, viewModel.canCalculateDividend) map:^id(NSNumber *canCalculate) {
+        return (canCalculate.boolValue) ? @1.0 : @0.4;
+    }];
+    
+    [self rac_liftSelector:@selector(calculationCompleted:)
+               withSignals:[RACObserve(self, viewModel.tableViewNeedsReload) ignore:@NO], nil];
+}
+
+- (void)calculationCompleted:(NSNumber *)completed {
+    [self.tableView reloadData];
+    self.viewModel.tableViewNeedsReload = NO;
 }
 
 - (void)updateLabels {

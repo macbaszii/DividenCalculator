@@ -22,6 +22,7 @@
 		DD2770931C370D680043437B /* NSNumber+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770921C370D680043437B /* NSNumber+Helper.m */; };
 		DD2770961C370F960043437B /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770951C370F960043437B /* Participant.m */; };
 		DD2770991C3716CD0043437B /* NSString+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2770981C3716CD0043437B /* NSString+Helper.m */; };
+		DD27709C1C37ADC90043437B /* DividendCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = DD27709B1C37ADC90043437B /* DividendCalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		DD2770951C370F960043437B /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
 		DD2770971C3716CD0043437B /* NSString+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Helper.h"; sourceTree = "<group>"; };
 		DD2770981C3716CD0043437B /* NSString+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Helper.m"; sourceTree = "<group>"; };
+		DD27709A1C37ADC90043437B /* DividendCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DividendCalculator.h; sourceTree = "<group>"; };
+		DD27709B1C37ADC90043437B /* DividendCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DividendCalculator.m; sourceTree = "<group>"; };
 		E2BA2F38A18F3D1DE5C606C2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EFA2027780D8AE192A15A55F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F889D4A214D2B9FE70FF390A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,8 @@
 			children = (
 				DD2770941C370F960043437B /* Participant.h */,
 				DD2770951C370F960043437B /* Participant.m */,
+				DD27709A1C37ADC90043437B /* DividendCalculator.h */,
+				DD27709B1C37ADC90043437B /* DividendCalculator.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -361,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD27709C1C37ADC90043437B /* DividendCalculator.m in Sources */,
 				DD2770601C36FDFA0043437B /* MainViewController.m in Sources */,
 				DD2770931C370D680043437B /* NSNumber+Helper.m in Sources */,
 				DD27705D1C36FDFA0043437B /* AppDelegate.m in Sources */,

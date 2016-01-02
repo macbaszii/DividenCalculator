@@ -6,9 +6,18 @@
 //  Copyright © 2559 Kiattisak Anoochitarom. All rights reserved.
 //
 
+#import <ReactiveCocoa/ReactiveCocoa.h>
+
 #import "MainViewModel.h"
 #import "NSNumber+Helper.h"
 #import "Participant.h"
+#import "DividendCalculator.h"
+
+@interface MainViewModel()
+
+@property (strong, nonatomic) RACSignal *dataValidationSignal;
+
+@end
 
 @implementation MainViewModel
 
@@ -20,6 +29,9 @@
     self.totalFund = 0;
     self.interest = 0;
     self.participants = [@[] mutableCopy];
+    self.tableViewNeedsReload = NO;
+    
+    [self setupBindings];
     
     return self;
 }
@@ -28,7 +40,7 @@
 
 - (void)addParticipantWithFund:(double)fund {
     [self.participants addObject:[[Participant alloc] initWithFund:fund]];
-    [self calculateTotalFund];
+    self.totalFund = [DividendCalculator calculateTotalFundForParticipants:self.participants].doubleValue;
 }
 
 - (NSString *)totalFundText {
@@ -40,18 +52,56 @@
 }
 
 - (NSString *)addParticipantText {
-    return [NSString stringWithFormat:@"เพิ่มผู้ร่วมทุนคนที่ %ld", self.participants.count];
+    return [NSString stringWithFormat:@"เพิ่มผู้ร่วมทุนคนที่ %ld", self.participants.count + 1];
+}
+
+- (BOOL)canCalculateDividend {
+    return (self.totalFund > 0) &&
+            (self.interest >= 0) &&
+             (self.participants.count >= 1);
 }
 
 #pragma mark - Internal Methods
 
-- (void)calculateTotalFund {
-    double sum = 0;
-    for (Participant *participant in self.participants) {
-        sum += participant.fund;
+- (void)setupBindings {
+    RACSignal *validParticipants = [RACObserve(self, participants) map:^id(NSArray<Participant *> *participants) {
+        return @(participants.count > 1);
+    }];
+    
+    RACSignal *validTotalFind = [RACObserve(self, totalFund) map:^id(NSNumber *value) {
+        return @(value.doubleValue > 0);
+    }];
+    
+    RACSignal *validInterest = [RACObserve(self, interest) map:^id(NSNumber *value) {
+        return @(value.doubleValue >= 0);
+    }];
+    
+    RAC(self, canCalculateDividend) = [RACSignal combineLatest:@[validParticipants, validTotalFind, validInterest] reduce:^id(NSNumber *isParticipantsValid, NSNumber *isTotalFundValid, NSNumber *isInterestValid){
+        
+        return @(isParticipantsValid.boolValue &&
+                    isTotalFundValid.boolValue &&
+                        isInterestValid.boolValue);
+    }];
+    
+    RAC(self, participants) = [self.calculateDividendCommand.executionSignals switchToLatest];
+}
+
+- (RACCommand *)calculateDividendCommand {
+    if (!_calculateDividendCommand) {
+        @weakify(self);
+        _calculateDividendCommand = [[RACCommand alloc] initWithEnabled:RACObserve(self, canCalculateDividend) signalBlock:^RACSignal *(id input) {
+            @strongify(self);
+            
+            return [DividendCalculator signalForCalculateDividendWithParticipants:self.participants andCollectedInterest:@(self.interest)];
+        }];
     }
     
-    self.totalFund = sum;
+    return _calculateDividendCommand;
+}
+
+- (void)setParticipants:(NSMutableArray<Participant *> *)participants {
+    _participants = participants;
+    self.tableViewNeedsReload = YES;
 }
 
 @end
