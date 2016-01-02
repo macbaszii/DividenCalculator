@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน-->
@@ -20,35 +19,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="จำนวนเงินรวม" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6w-VO-meX">
-                                <rect key="frame" x="20" y="94" width="100" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="20" y="94" width="117" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ดอกเบี้ย" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-jZ-hIS">
-                                <rect key="frame" x="522" y="94" width="58" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ดอกเบี้ย" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-jZ-hIS">
+                                <rect key="frame" x="512" y="94" width="68" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="MGB-cl-fis">
-                                <rect key="frame" x="17" y="123" width="107" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="20" y="126" width="142" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-Ie-dok">
-                                <rect key="frame" x="514" y="123" width="74" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <rect key="frame" x="482" y="126" width="98" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EEi-9W-Iww" customClass="CircleButton">
-                                <rect key="frame" x="130" y="199" width="100" height="100"/>
+                                <rect key="frame" x="130" y="214" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EEi-9W-Iww" secondAttribute="height" multiplier="1:1" id="7qb-6b-HCv"/>
                                     <constraint firstAttribute="height" constant="100" id="mfU-4c-Two"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="เพิ่มผู้ร่วมทุน">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -57,17 +57,18 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKM-mm-zuY" customClass="CircleButton">
-                                <rect key="frame" x="250" y="199" width="100" height="100"/>
+                                <rect key="frame" x="250" y="214" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hKM-mm-zuY" secondAttribute="height" multiplier="1:1" id="BTG-jY-qD1"/>
                                     <constraint firstAttribute="height" constant="100" id="Zjw-jl-ejV"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="คำนวนเงินปันผล">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-A2-zKr">
-                                <rect key="frame" x="0.0" y="307" width="600" height="293"/>
+                                <rect key="frame" x="0.0" y="322" width="600" height="278"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParticipantCell" rowHeight="60" id="g1G-rN-7zH" customClass="ParticipantCell">
@@ -78,14 +79,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. 2000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNX-gx-F2D">
-                                                    <rect key="frame" x="20" y="0.0" width="58" height="59"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="20" y="0.0" width="69" height="59"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45.75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VLc-Nx-BOL">
-                                                    <rect key="frame" x="535" y="0.0" width="45" height="59"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="527" y="0.0" width="53" height="59"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -112,11 +113,12 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mY4-HS-fzC" customClass="CircleButton">
-                                <rect key="frame" x="370" y="199" width="100" height="100"/>
+                                <rect key="frame" x="370" y="214" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mY4-HS-fzC" secondAttribute="height" multiplier="1:1" id="PAF-4e-Jr0"/>
                                     <constraint firstAttribute="height" constant="100" id="XbW-RQ-bAy"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="แก้ไขดอกเบี้ย">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -130,15 +132,15 @@
                             <constraint firstItem="dmn-Ie-dok" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="MGB-cl-fis" secondAttribute="trailing" constant="8" id="5g2-aG-2VA"/>
                             <constraint firstItem="MGB-cl-fis" firstAttribute="centerY" secondItem="dmn-Ie-dok" secondAttribute="centerY" id="6zS-6U-QgG"/>
                             <constraint firstItem="mY4-HS-fzC" firstAttribute="leading" secondItem="hKM-mm-zuY" secondAttribute="trailing" constant="20" id="J9b-18-c9s"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FQS-jZ-hIS" secondAttribute="trailing" id="LWe-Dj-fBB"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="N6w-VO-meX" secondAttribute="leading" id="N8z-b0-mic"/>
-                            <constraint firstItem="MGB-cl-fis" firstAttribute="centerX" secondItem="N6w-VO-meX" secondAttribute="centerX" id="RRk-6C-3dj"/>
+                            <constraint firstAttribute="trailing" secondItem="FQS-jZ-hIS" secondAttribute="trailing" constant="20" symbolic="YES" id="LWe-Dj-fBB"/>
+                            <constraint firstItem="N6w-VO-meX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="N8z-b0-mic"/>
                             <constraint firstAttribute="trailing" secondItem="DcP-A2-zKr" secondAttribute="trailing" id="Swl-hf-33l"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mY4-HS-fzC" secondAttribute="trailing" constant="20" symbolic="YES" id="TNn-u7-vee"/>
                             <constraint firstItem="N6w-VO-meX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="TQ1-ai-eVq"/>
                             <constraint firstItem="hKM-mm-zuY" firstAttribute="top" secondItem="MGB-cl-fis" secondAttribute="bottom" constant="40" id="TlR-5c-1Br"/>
+                            <constraint firstItem="dmn-Ie-dok" firstAttribute="trailing" secondItem="FQS-jZ-hIS" secondAttribute="trailing" id="Vtv-nb-Ken"/>
                             <constraint firstItem="MGB-cl-fis" firstAttribute="top" secondItem="N6w-VO-meX" secondAttribute="bottom" constant="8" id="WkB-cw-GXf"/>
-                            <constraint firstItem="dmn-Ie-dok" firstAttribute="centerX" secondItem="FQS-jZ-hIS" secondAttribute="centerX" id="dne-vW-htW"/>
+                            <constraint firstItem="MGB-cl-fis" firstAttribute="leading" secondItem="N6w-VO-meX" secondAttribute="leading" id="bpo-eA-zqK"/>
                             <constraint firstItem="hKM-mm-zuY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fkB-cC-8yJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DcP-A2-zKr" secondAttribute="bottom" id="gBV-g2-6pR"/>
                             <constraint firstItem="EEi-9W-Iww" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="gNx-oA-tdu"/>
@@ -153,7 +155,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="โปรแกรมคำนวณเงินปันผลกองทุนหมู่บ้าน" id="aaA-F1-sFm">
-                        <barButtonItem key="leftBarButtonItem" title="Clear" id="pt8-nY-fkt">
+                        <barButtonItem key="leftBarButtonItem" title="ล้างข้อมูล" id="pt8-nY-fkt">
                             <connections>
                                 <action selector="clear:" destination="BYZ-38-t0r" id="gBx-3c-v0s"/>
                             </connections>

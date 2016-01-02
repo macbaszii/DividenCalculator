@@ -111,6 +111,8 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 #pragma mark - Internal Methods
 
 - (void)setupView {
+    [self.addParticipantButton setTitle:@"เพิ่ม\nผู้ร่วมทุน"
+                               forState:UIControlStateNormal];
     self.addParticipantButton.backgroundColor = [UIColor addParticipantButtonColor];
     self.calculateButton.backgroundColor = [UIColor calculateButtonColor];
     self.editInterestButton.backgroundColor = [UIColor editInterestButtonColor];
@@ -132,7 +134,8 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 }
 
 - (void)calculationCompleted:(NSNumber *)completed {
-    [self.tableView reloadData];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
+                  withRowAnimation:UITableViewRowAnimationAutomatic];
     self.viewModel.tableViewNeedsReload = NO;
 }
 
