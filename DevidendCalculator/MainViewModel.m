@@ -39,7 +39,8 @@
 #pragma mark - Public Accessor
 
 - (void)addParticipantWithFund:(double)fund {
-    [self.participants addObject:[[Participant alloc] initWithFund:fund]];
+    NSMutableArray *participants = [self mutableArrayValueForKeyPath:@keypath(self, participants)];
+    [participants addObject:[[Participant alloc] initWithFund:fund]];
     self.totalFund = [DividendCalculator calculateTotalFundForParticipants:self.participants].doubleValue;
 }
 
@@ -55,12 +56,6 @@
     return [NSString stringWithFormat:@"เพิ่มผู้ร่วมทุนคนที่ %ld", self.participants.count + 1];
 }
 
-- (BOOL)canCalculateDividend {
-    return (self.totalFund > 0) &&
-            (self.interest >= 0) &&
-             (self.participants.count >= 1);
-}
-
 #pragma mark - Internal Methods
 
 - (void)setupBindings {
@@ -73,7 +68,7 @@
     }];
     
     RACSignal *validInterest = [RACObserve(self, interest) map:^id(NSNumber *value) {
-        return @(value.doubleValue >= 0);
+        return @(value.doubleValue > 0);
     }];
     
     RAC(self, canCalculateDividend) = [RACSignal combineLatest:@[validParticipants, validTotalFind, validInterest] reduce:^id(NSNumber *isParticipantsValid, NSNumber *isTotalFundValid, NSNumber *isInterestValid){
