@@ -30,6 +30,8 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 @property (strong, nonatomic) MainViewModel *viewModel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (strong, nonatomic) NSIndexPath *latestIndexPath;
+
 @end
 
 @implementation MainViewController
@@ -56,7 +58,6 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
         if ([input isNumeric]) {
             [self.viewModel addParticipantWithFund:[input doubleValue]];
             [self updateLabels];
-            [self.tableView reloadData];
         }
     }]];
     
@@ -129,13 +130,25 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
         return (canCalculate.boolValue) ? @1.0 : @0.4;
     }];
     
+    RAC(self, latestIndexPath) = [RACObserve(self, viewModel.participants) map:^id(NSArray<Participant *> *participants) {
+        return [NSIndexPath indexPathForRow:participants.count
+                                  inSection:0];
+    }];
+    
     [self rac_liftSelector:@selector(calculationCompleted:)
                withSignals:[RACObserve(self, viewModel.tableViewNeedsReload) ignore:@NO], nil];
 }
 
 - (void)calculationCompleted:(NSNumber *)completed {
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0]
-                  withRowAnimation:UITableViewRowAnimationAutomatic];
+    NSIndexPath *addingIndexPath = [NSIndexPath indexPathForRow:(self.viewModel.participants.count - 1)
+                                                      inSection:0];
+    if ([self.latestIndexPath isEqual:addingIndexPath]) {
+        [self.tableView insertRowsAtIndexPaths:@[addingIndexPath]
+                              withRowAnimation:UITableViewRowAnimationRight];
+    } else {
+        [self.tableView reloadData];
+    }
+    
     self.viewModel.tableViewNeedsReload = NO;
 }
 
