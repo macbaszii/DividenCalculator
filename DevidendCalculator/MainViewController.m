@@ -123,7 +123,7 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
     ParticipantCell *cell = [tableView dequeueReusableCellWithIdentifier:ParticipantCellIdentifier
                                                             forIndexPath:indexPath];
     Participant *participant = self.viewModel.participants[indexPath.row];
-    [cell configureWithParticipant:participant atRow:indexPath.row];
+    [cell configureWithParticipant:participant atRow:(self.viewModel.participants.count - 1 - indexPath.row)];
     
     return cell;
 }
@@ -159,22 +159,7 @@ static NSString * const ParticipantCellIdentifier = @"ParticipantCell";
 }
 
 - (void)calculationCompleted:(NSNumber *)completed {
-    NSIndexPath *addingIndexPath = [NSIndexPath indexPathForRow:(self.viewModel.participants.count - 1)
-                                                      inSection:0];
-    if ([self.latestIndexPath isEqual:addingIndexPath]) {
-        [self.tableView insertRowsAtIndexPaths:@[addingIndexPath]
-                              withRowAnimation:UITableViewRowAnimationRight];
-        [self.tableView reloadData];
-    } else {
-        if (self.latestIndexPath.row - addingIndexPath.row == 2) {
-            NSIndexPath *deletionIndexPath = [NSIndexPath indexPathForRow:(self.latestIndexPath.row - 1) inSection:0];
-            [self.tableView deleteRowsAtIndexPaths:@[deletionIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
-            [self.tableView reloadData];
-        } else {
-            [self.tableView reloadData];
-        }
-    }
-    
+    [self.tableView reloadData];
     self.viewModel.tableViewNeedsReload = NO;
 }
 

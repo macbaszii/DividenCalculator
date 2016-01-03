@@ -36,14 +36,17 @@
 
 - (void)addParticipantWithFund:(double)fund {
     NSMutableArray *participants = [self mutableArrayValueForKeyPath:@keypath(self, participants)];
-    [participants addObject:[[Participant alloc] initWithFund:fund]];
+    [participants insertObject:[[Participant alloc] initWithFund:fund]
+                       atIndex:0];
+//    [participants addObject:[[Participant alloc] initWithFund:fund]];
     [self resetParticipantsDividend];
     self.totalFund = [DividendCalculator calculateTotalFundForParticipants:self.participants].doubleValue;
 }
 
 - (void)deleteLatestPaticipant {
     NSMutableArray *participants = [self mutableArrayValueForKeyPath:@keypath(self, participants)];
-    [participants removeLastObject];
+//    [participants removeLastObject];
+    [participants removeObjectAtIndex:0];
     [self resetParticipantsDividend];
     self.totalFund = [DividendCalculator calculateTotalFundForParticipants:self.participants].doubleValue;
 }
@@ -117,6 +120,12 @@
 
 - (void)setParticipants:(NSMutableArray<Participant *> *)participants {
     _participants = participants;
+    self.tableViewNeedsReload = YES;
+}
+
+- (void)setInterest:(double)interest {
+    _interest = interest;
+    [self resetParticipantsDividend];
     self.tableViewNeedsReload = YES;
 }
 
