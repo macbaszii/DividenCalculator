@@ -27,9 +27,9 @@
 }
 
 + (RACSignal *)signalForCalculateDividendWithParticipants:(NSArray<Participant *> *)participants andCollectedInterest:(NSNumber *)interest {
-    
+    @weakify(self)
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-       
+       @strongify(self)
         double totalFund = [self calculateTotalFundForParticipants:participants].doubleValue;
         for (Participant *participant in participants) {
             double percentageOfParticipation = @(participant.fund * 100 / totalFund).doubleValue;
